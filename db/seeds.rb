@@ -25,6 +25,28 @@ Post.create!(
   user_id: @user2.id
 )
 Post.create!(
+  origin: "Skopje",
+  destination: "Bitola",
+  date: Date.today,
+  time: Time.utc(2019,"feb",1,20,15,1),
+  passengers: 2,
+  cost: 300,
+  vechile: "Golf 5",
+  phone: 38669652555,
+  user_id: @user2.id
+)
+Post.create!(
+  origin: "Skopje",
+  destination: "Kumanovo",
+  date: Date.today,
+  time: Time.utc(2019,"feb",1,20,15,1),
+  passengers: 2,
+  cost: 300,
+  vechile: "Golf 5",
+  phone: 38669652555,
+  user_id: @user2.id
+)
+Post.create!(
   origin: "Bitola",
   destination: "Kumanovo",
   date: Date.today,

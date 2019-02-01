@@ -1,3 +1,9 @@
+<%= form_tag(posts_path,  method: :get) do %>
+  <%= select_tag(:origin, options_for_select(@posts.all.collect{|u|[u.origin, u.origin]}.uniq, params[:origin] ))%>
+  <%= select_tag(:destination, options_for_select(@posts.all.collect{|u|[u.destination, u.destination]}.uniq, params[:destination] ))%>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <div class="card post-items">
   <div class="rTable">
     <div class="rTableRow">
