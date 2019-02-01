@@ -1,0 +1,97 @@
+@import "semantic-ui";
+@import "bootstrap";
+// MAIN STYLES
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #d7e1ff;
+  a{
+    color:#ededed;
+  }
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6, {
+  font-family: 'Roboto Slab', serif;
+}
+.main-nav {
+  background-color: #3abec2;
+}
+.navbar-custom{
+  padding-top:0.8rem;
+  padding-bottom:0.8rem;
+}
+.main-nav-items a{
+  margin-left:10px;
+  font-size: 1.2rem;
+}
+.logo{
+  font-size:1.8rem;
+}
+.post-items {
+  margin-top: 2em;
+  border: 1px solid #fafafa;
+}
+
+
+.left-col div {
+  padding-top: 15px;
+}
+
+.post-show {
+  margin-top: 2rem;
+}
+.rTable { display: table; }
+.rTableRow { display: table-row; }
+.rTableHeading { display: table-header-group; }
+.rTableBody { display: table-row-group; }
+.rTableFoot { display: table-footer-group; }
+.rTableCell, .rTableHead { display: table-cell; }
+
+.rTable {
+  	display: table;
+  	width: 100%;
+
+}
+.rTableRow {
+  	display: table-row;
+}
+.rTableHeading {
+  	display: table-header-group;
+  	background-color: #ddd;
+
+}
+.rTableHead {
+  font-weight: 600;
+}
+.rTableCell, .rTableHead {
+  	display: table-cell;
+  	border-bottom: 1px solid #999999;
+    padding:0.5em;
+
+}
+.rTableHeading {
+  	display: table-header-group;
+  	background-color: #ddd;
+  	font-weight: bold;
+}
+.rTableFoot {
+  	display: table-footer-group;
+  	font-weight: bold;
+  	background-color: #ddd;
+}
+.rTableBody {
+  	display: table-row-group;
+}
+
+.rTable a{
+  color: #000000;
+   text-decoration: none;
+}
+
+// Post show page
+.post-details {
+  font-weight: bold;
+}

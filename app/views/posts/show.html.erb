@@ -1,0 +1,68 @@
+<div class="card post-show">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-5 left-col">
+
+          <h3><%= @post.origin %> - <%= @post.destination %></h3>
+
+        <div class="row">
+          <div class="col-sm-6 post-details">
+            Дата на поаѓање:
+          </div>
+          <div class="col-sm-6">
+            <%= @post.date.strftime("%D")%>, <%= @post.date.strftime("%A")  %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 post-details ">
+            Време на поаѓање:
+          </div>
+          <div class="col-sm-6">
+            <%= @post.time.strftime("%H:%M")  %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 post-details ">
+            Број на слободни места:
+          </div>
+          <div class="col-sm-6">
+            <%= @post.passengers  %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 post-details ">
+            Цена за превоз:
+          </div>
+          <div class="col-sm-6">
+            <%= @post.cost  %> Денари
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 post-details ">
+            Опис на автомобил:
+          </div>
+          <div class="col-sm-6">
+            <%= @post.vechile  %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 post-details ">
+            Телефонски број:
+          </div>
+          <div class="col-sm-6">
+            <%= "+" +  number_to_phone(@post.phone.to_i,  pattern: /(\d{1,4})(\d{4})(\d{4})$/)  %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-7 right-col">
+
+      </div>
+    </div>
+  </div>
+</div>

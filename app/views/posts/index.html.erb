@@ -1,0 +1,21 @@
+<div class="card post-items">
+  <div class="rTable">
+    <div class="rTableRow">
+      <div class="rTableHead">Origin</div>
+      <div class="rTableHead">Destination</div>
+      <div class="rTableHead">Date</div>
+      <div class="rTableHead">Time</div>
+      <div class="rTableHead">Cena</div>
+    </div>
+    <% @posts.each do |post| %>
+    <a href="<%= url_for(post) %>" class="rTableRow">
+        <div class="rTableCell"><%= post.origin %></div>
+        <div class="rTableCell"><%= post.destination %></div>
+        <div class="rTableCell"><%= post.date.strftime("%D")%>,<br> <%= post.date.strftime("%A")  %></div>
+        <div class="rTableCell"><%= post.time.strftime("%H:%M")  %></div>
+        <div class="rTableCell"><%= number_to_currency(post.cost, unit:" Denari", format: ("%n %u"), precision: 0) %></div>
+    </a>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+<nav class="site-header sticky-top py-1 main-nav">
+  <div class="container d-flex flex-column flex-md-row justify-content-between navbar-custom">
+    <div class="navbar-header navbar-left">
+      <%= link_to "Вози ме", root_path, class: "navbar-brand logo" %>
+    </div>
+    <div class="navbar-right main-nav-items">
+      <% if current_user %>
+      <%= link_to "Мој Профил", edit_user_registration_path(current_user), class: "py-2 d-none d-md-inline-block" %>
+      <%= link_to "Мој Превози", user_profile_path(current_user), class: "py-2 d-none d-md-inline-block" %>
+      <%= link_to "Одјава", destroy_user_session_path, method: :delete  , class: "py-2 d-none d-md-inline-block" %>
+      <% else %>
+      <%= link_to "Пријава", new_user_session_path , class: "py-2 d-none d-md-inline-block" %>
+      <%= link_to "Регистрација", new_user_registration_path , class: "py-2 d-none d-md-inline-block" %>
+      <% end %>
+    </div>
+
+  </div>
+</nav>

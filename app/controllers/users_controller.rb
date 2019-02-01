@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only:[:show]
+  before_action :set_user, only:[:show, :profile]
   def show
 
+  end
+
+  def profile
+    
   end
 
   private
